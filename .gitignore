@@ -12,6 +12,9 @@
 .output/
 #Extension App-file
 *.app
+.bin/
+.obj/
+.vs/
 #Rapid Application Development File
 rad.json
 #Translation Base-file
