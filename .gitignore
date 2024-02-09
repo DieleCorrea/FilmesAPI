@@ -21,6 +21,7 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+
 /ApiFilme/bin
 /ApiFilme/obj
 /ApiFilme/debug
