@@ -12,8 +12,6 @@
 .output/
 #Extension App-file
 *.app
-.bin/
-.obj/
 .vs/
 #Rapid Application Development File
 rad.json
@@ -23,3 +21,6 @@ rad.json
 *.flf
 #Test results file
 TestResults.xml
+/ApiFilme/bin
+/ApiFilme/obj
+/ApiFilme/debug
