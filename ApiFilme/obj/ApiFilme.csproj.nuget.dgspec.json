@@ -1,31 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Diéle\\Desktop\\GitHub\\FilmesApi\\ApiFilme\\ApiFilme.csproj": {}
+    "C:\\Users\\Diele\\Desktop\\treino\\FilmesApi\\ApiFilme\\ApiFilme.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Diéle\\Desktop\\GitHub\\FilmesApi\\ApiFilme\\ApiFilme.csproj": {
+    "C:\\Users\\Diele\\Desktop\\treino\\FilmesApi\\ApiFilme\\ApiFilme.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diéle\\Desktop\\GitHub\\FilmesApi\\ApiFilme\\ApiFilme.csproj",
+        "projectUniqueName": "C:\\Users\\Diele\\Desktop\\treino\\FilmesApi\\ApiFilme\\ApiFilme.csproj",
         "projectName": "ApiFilme",
-        "projectPath": "C:\\Users\\Diéle\\Desktop\\GitHub\\FilmesApi\\ApiFilme\\ApiFilme.csproj",
-        "packagesPath": "C:\\Users\\Diéle\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diéle\\Desktop\\GitHub\\FilmesApi\\ApiFilme\\obj\\",
+        "projectPath": "C:\\Users\\Diele\\Desktop\\treino\\FilmesApi\\ApiFilme\\ApiFilme.csproj",
+        "packagesPath": "C:\\Users\\Diele\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Diele\\Desktop\\treino\\FilmesApi\\ApiFilme\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Diéle\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Diele\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "G:\\Drives compartilhados\\Desenvolvimento\\Nuget-Rodosoft\\Projetos": {},
+          "\\\\192.168.0.10\\f\\Desenvolvimento\\Nuget-Rodosoft\\Projetos": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -68,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

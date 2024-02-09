@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "8vb+bjgbVlRYkDVs+6+80BRYJBQUG9SA7WJXumz2IcEUrOwjlyq2dc7zj9u2bosnEU1RjJbDjmscQ9Pq6DRa5w==",
+  "dgSpecHash": "5kEvdVCMq4Ds0W+yKyUa37P9Mry1R7L/W8EsRmLiX/VonNCDwbWmyhcFntuWdXJOdARlrynN6RQvJoxB2H3YCA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Diéle\\Desktop\\GitHub\\FilmesApi\\ApiFilme\\ApiFilme.csproj",
+  "projectFilePath": "C:\\Users\\Diele\\Desktop\\treino\\FilmesApi\\ApiFilme\\ApiFilme.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Diéle\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
-    "C:\\Users\\Diéle\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\Diéle\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
-    "C:\\Users\\Diéle\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
-    "C:\\Users\\Diéle\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
-    "C:\\Users\\Diéle\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    "C:\\Users\\Diele\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Diele\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Diele\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\Diele\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\Diele\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\Diele\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
   ],
   "logs": []
 }
