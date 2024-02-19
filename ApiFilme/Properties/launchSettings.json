@@ -12,9 +12,9 @@
     "ApiFilme": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "swagger",
-      "applicationUrl": "https://192.168.100.7:7085;http://localhost:5160",
+      "applicationUrl": "https://localhost:7085;http://localhost:5160",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
