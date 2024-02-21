@@ -1,4 +1,5 @@
-﻿using ApiFilme.Models;
+﻿using ApiFilme.Data;
+using ApiFilme.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualBasic;
 using static System.Net.WebRequestMethods;
@@ -9,14 +10,18 @@ namespace ApiFilme.Controllers
     [Route("[controller]")]
     public class FilmesController : ControllerBase
     {
-        private static List<Filme> filmes = new List<Filme>();
-        private static int id = 0;
+        private FilmeContext _context;
+
+        public FilmesController(FilmeContext context)
+        {
+            _context = context;
+        }
 
         [HttpPost]//responsavel por inserir os recursos no sistema 
         public IActionResult AdicionaFilme([FromBody] Filme filme)
         {
-            filme.Id = id++;
-            filmes.Add(filme);
+           _context.Filmes.Add(filme);
+            _context.SaveChanges();//Salva as  alteraações feitas
             //esse return é para informar ao meu usuario no header do postman qual caminho ele pode encontrar esse filme recem criado 
             #region Explicação
             //Resposta do ChatGPT: *A razão pela qual você está utilizando CreatedAtAction para retornar o resultado em vez de simplesmente return filme pode estar relacionada à convenção RESTful de design de APIs.
@@ -37,13 +42,13 @@ namespace ApiFilme.Controllers
         public IEnumerable<Filme> RecuperaFilmes([FromQuery] int skip=0,
             [FromQuery] int take=50)
         {
-            return filmes.Skip(skip).Take(take);
+            return _context.Filmes.Skip(skip).Take(take);
         }
 
         [HttpGet("{id}")]
         public IActionResult RecuperaFilmesPorId(int id)
         {
-            var filme = filmes.FirstOrDefault(filme => filme.Id ==  id);
+            var filme = _context.Filmes.FirstOrDefault(filme => filme.Id ==  id);
             if (filme == null)
             {
                 return NotFound();
