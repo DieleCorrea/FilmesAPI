@@ -1,5 +1,6 @@
 ﻿using ApiFilme.Data;
 using ApiFilme.Models;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualBasic;
 using static System.Net.WebRequestMethods;
@@ -11,15 +12,18 @@ namespace ApiFilme.Controllers
     public class FilmesController : ControllerBase
     {
         private FilmeContext _context;
-
-        public FilmesController(FilmeContext context)
+        private IMapper _mapper;
+        public FilmesController(FilmeContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         [HttpPost]//responsavel por inserir os recursos no sistema 
-        public IActionResult AdicionaFilme([FromBody] Filme filme)
+        public IActionResult AdicionaFilme([FromBody] CreateFilmeDto filmeDto)
         {
+            //chamar o automapper para ele converter CreateFilmeDto para um filme
+            Filme filme = _mapper.Map<Filme>(filmeDto);
            _context.Filmes.Add(filme);
             _context.SaveChanges();//Salva as  alteraações feitas
             //esse return é para informar ao meu usuario no header do postman qual caminho ele pode encontrar esse filme recem criado 
