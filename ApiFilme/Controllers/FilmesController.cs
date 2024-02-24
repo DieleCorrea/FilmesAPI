@@ -59,5 +59,40 @@ namespace ApiFilme.Controllers
             }
             return Ok(filme);
         }
+        [HttpPut("{id}")]
+        public IActionResult AtualizaFilme(int id, [FromBody]UpdateFilmeDto filmeDto )
+        {
+            //recupera o filme do banco apartir do id que tem la, e ve se é nullo, caso for  nulo retorna um notfound
+            var filme = _context.Filmes.FirstOrDefault(filme => filme.Id == id);
+            if(filme == null)
+            {
+                NotFound();
+            }
+            //Deu tudo certo e não é null, então vai mapear filmeDto para filme e salvar as mudanças 
+            _mapper.Map(filmeDto, filme);
+            _context.SaveChanges();
+            //Tendo salvado, retornamos  um statusCode que é o NoConotent() retornamos ele normalmente quando fazemos  uma ALTERAÇÃO 
+            return NoContent();
+            #region Porque retorna NoContent()
+                /*
+                    -Indica sucesso: 
+                        O status HTTP 204 indica que a solicitação foi processada com sucesso pelo servidor, mas não há conteúdo a ser retornado no corpo da resposta. 
+                        Isso é útil em casos onde a alteração feita não requer uma resposta com dados específicos. Por exemplo, ao deletar um recurso, não há necessidade de retornar 
+                        os detalhes desse recurso após a exclusão
+                    -Reduz a sobrecarga de dados: 
+                        Retornar um corpo vazio com um status 204 economiza largura de banda e reduz o tempo de processamento, 
+                        pois não há necessidade de enviar dados desnecessários pela rede.
+                    -Sem informações adicionais: 
+                        Se o cliente já possui todas as informações necessárias para entender o resultado da solicitação (por exemplo, ao atualizar um recurso),
+                        não há necessidade de retornar informações adicionais
+                    -Padrão em muitos frameworks e bibliotecas:
+                        Muitos frameworks e bibliotecas para desenvolvimento de APIs e serviços da web implementam a lógica de retornar 
+                        um status 204 em certas circunstâncias (como ao deletar um recurso) como parte das convenções e boas práticas de desenvolvimento
+
+                Portanto, retornar um status 204 No Content é uma maneira eficiente e padronizada de indicar que uma operação foi realizada com sucesso, 
+                mas não há dados específicos para retornar como parte da resposta.
+                */
+            #endregion
+        }
     }
 }
