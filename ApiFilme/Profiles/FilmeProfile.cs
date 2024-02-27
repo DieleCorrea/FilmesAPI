@@ -1,4 +1,4 @@
-﻿using ApiFilme.Data;
+﻿using ApiFilme.Data.Dtos;
 using ApiFilme.Models;
 using AutoMapper;
 
@@ -11,6 +11,8 @@ namespace ApiFilme.Profiles
         {
                 CreateMap<CreateFilmeDto, Filme>();
                 CreateMap<UpdateFilmeDto, Filme>();
+                CreateMap<Filme, UpdateFilmeDto>();
+                CreateMap<Filme, ReadFilmeDto>();
         }
     }
 }
