@@ -9,6 +9,8 @@ namespace ApiFilme.Data
         {
         }
 
+        // para criar a tabela no banco 
         public DbSet<Filme> Filmes { get; set; }
+        public DbSet<Cinema> Cinemas { get; set; }
     }
 }
