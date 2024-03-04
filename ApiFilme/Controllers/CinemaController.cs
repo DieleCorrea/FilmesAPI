@@ -9,7 +9,7 @@ namespace ApiFilme.Controllers
 {
     [ApiController]
     [Route("[Controller]")]
-    public class CinemaController : Controller
+    public class CinemaController : ControllerBase
     {
         //injeção da dependencias 
         private FilmeContext _context;
