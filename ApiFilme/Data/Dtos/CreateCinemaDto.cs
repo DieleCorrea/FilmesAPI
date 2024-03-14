@@ -6,5 +6,7 @@ namespace ApiFilme.Data.Dtos
     {
         [Required(ErrorMessage = "O camppo nome é obrigatório")]
         public string Nome { get; set; }
+        public int EnderecoId { get; set; }
+      
     }
 }
