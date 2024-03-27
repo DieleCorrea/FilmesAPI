@@ -12,7 +12,9 @@ namespace ApiFilme.Profiles
                 CreateMap<CreateFilmeDto, Filme>();
                 CreateMap<UpdateFilmeDto, Filme>();
                 CreateMap<Filme, UpdateFilmeDto>();
-                CreateMap<Filme, ReadFilmeDto>();
+                CreateMap<Filme, ReadFilmeDto>()
+                .ForMember(FilmeDto => FilmeDto.Sessoes, opt => opt.MapFrom(Filme => Filme.Sessoes));//para o membro de ReadEnderecoDto eu mapeio de Endereco
+
         }
     }
 }
