@@ -8,6 +8,23 @@ namespace ApiFilme.Data
         public FilmeContext(DbContextOptions<FilmeContext> opts) : base(opts) 
         {
         }
+        //Aqui eu defino como vai ser costruido o  relacionamento de sessao e cinema, sessao e filme e como o ID vai ser montado os dois em um. 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Sessao>()
+                .HasKey(sessao => new {sessao.FilmeId, sessao.CinemaId});
+
+            modelBuilder.Entity<Sessao>()
+                .HasOne(sessao => sessao.Cinema)
+                .WithMany(cinema => cinema.Sessoes)
+                .HasForeignKey(sessao => sessao.CinemaId);
+
+
+            modelBuilder.Entity<Sessao>()
+                .HasOne(sessao => sessao.Filme)
+                .WithMany(filme => filme.Sessoes)
+                .HasForeignKey(sessao => sessao.FilmeId);
+        }
 
         // para criar a tabela no banco 
         public DbSet<Filme> Filmes { get; set; }
