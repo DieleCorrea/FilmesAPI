@@ -11,7 +11,7 @@ namespace ApiFilme.Models
         public string Nome { get; set; }
         [Required(ErrorMessage = "Contato é obrigatorio")]
         public string Contato { get; set; }
-        public  string Anotacoes { get; set; }
+        public string? Anotacoes { get; set; }
 
         //public virtual ICollection<Agendas> Agendas { get; set; }
     }
