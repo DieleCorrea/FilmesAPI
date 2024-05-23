@@ -36,5 +36,6 @@ namespace ApiFilme.Data
         public DbSet<Endereco> Enderecos { get; set; }
         public DbSet<Sessao> Sessoes { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Servico> Servicos { get; set; }
     }
 }
