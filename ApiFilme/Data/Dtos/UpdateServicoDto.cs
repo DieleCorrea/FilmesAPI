@@ -1,0 +1,14 @@
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ApiFilme.Data.Dtos
+{
+    public class UpdateServicoDto
+    {
+        [Required(ErrorMessage = "O Nome é obrigatório")]
+        public string Nome { get; set; }
+        [Required(ErrorMessage = "O TempoDeExecucao é obrigatório")]
+        public TimeSpan TempoDeExecucao { get; set; }
+        [Required(ErrorMessage = "O Valor é obrigatório")]
+        public decimal Valor { get; set; }
+    }
+}
