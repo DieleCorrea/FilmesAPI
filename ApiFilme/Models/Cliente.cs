@@ -13,6 +13,6 @@ namespace ApiFilme.Models
         public string Contato { get; set; }
         public string? Anotacoes { get; set; }
 
-        //public virtual ICollection<Agendas> Agendas { get; set; }
+        public virtual ICollection<Agenda> Agendas { get; set; }
     }
 }

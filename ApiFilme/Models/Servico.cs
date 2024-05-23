@@ -13,7 +13,7 @@ namespace ApiFilme.Models
         public TimeSpan TempoDeExecucao { get; set; }
         [Required(ErrorMessage = "O Valor é obrigatório")]
         public decimal Valor { get; set; }
-
+        public virtual ICollection<Agenda> Agendas { get; set; }    
         
         public Servico(int horas, int minutos)// Construtor que permite definir horas e minutos
         {
