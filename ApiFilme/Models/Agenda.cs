@@ -15,7 +15,20 @@ namespace ApiFilme.Models
         public int ServicoId { get; set; }
         public virtual Servico Servico { get; set; }
         [Required]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime Data { get; set; }
+
+        [Required]
+        [DataType(DataType.Time)]
+        [DisplayFormat(DataFormatString = "{0:HH:mm}", ApplyFormatInEditMode = true)]
+        public TimeSpan HoraInicio { get; set; }
+
+        [Required]
+        [DataType(DataType.Time)]
+        [DisplayFormat(DataFormatString = "{0:HH:mm}", ApplyFormatInEditMode = true)]
+        public TimeSpan HoraConclusao { get; set; }
+
         public string? Anotacoes { get; set; }
 
     }
