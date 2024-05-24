@@ -10,7 +10,9 @@ namespace ApiFilme.Profiles
         {
             CreateMap<CreateAgendaDto, Agenda>();
             CreateMap<UpdateAgendaDto, Agenda>();
-            CreateMap<Agenda, ReadAgendaDto>();
+            CreateMap<Agenda, ReadAgendaDto>()
+                .ForMember(agendadto => agendadto.Cliente, opt => opt.MapFrom(Agenda => Agenda.Cliente))
+                .ForMember(agendadto => agendadto.Servico, opt => opt.MapFrom(Agenda => Agenda.Servico));
         }
     }
 }

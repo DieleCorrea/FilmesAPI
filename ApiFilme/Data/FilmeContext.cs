@@ -27,7 +27,7 @@ namespace ApiFilme.Data
             modelBuilder.Entity<Endereco>()
                 .HasOne(endereco => endereco.Cinema)
                 .WithOne(cinema => cinema.Endereco)
-                .OnDelete(DeleteBehavior.Restrict);
+                .OnDelete(DeleteBehavior.Restrict);//não permite deletar, pois faz a deleção em cascata, e isso acarretaria em deletar o cinema e consequentimente a sessão 
         }
 
         // para criar a tabela no banco 

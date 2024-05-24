@@ -6,8 +6,8 @@ namespace ApiFilme.Data.Dtos
     public class ReadAgendaDto
     {
         public int AgendaId { get; set; }
-        public int ClienteId { get; set; }
-        public int ServicoId { get; set; }
+        public ReadClienteDto Cliente { get; set; }
+        public ReadServicoDto Servico { get; set; }
         public DateTime Data { get; set; }
         public string? Anotacoes { get; set; }
     }

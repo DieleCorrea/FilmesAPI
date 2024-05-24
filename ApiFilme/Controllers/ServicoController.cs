@@ -21,7 +21,7 @@ namespace ApiFilme.Controllers
 
 
         [HttpPost]
-        public IActionResult AdicionaCliente([FromBody] CreateServicoDto createServico)
+        public IActionResult AdicionaServico([FromBody] CreateServicoDto createServico)
         {
             Servico servico = _mapper.Map<Servico>(createServico);
             _context.Servicos.Add(servico);
