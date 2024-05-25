@@ -3,6 +3,7 @@ using System;
 using ApiFilme.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiFilme.Migrations
 {
     [DbContext(typeof(FilmeContext))]
-    partial class FilmeContextModelSnapshot : ModelSnapshot
+    [Migration("20240524181803_Alteracao propriedade agenda")]
+    partial class Alteracaopropriedadeagenda
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -34,10 +36,10 @@ namespace ApiFilme.Migrations
                     b.Property<DateTime>("Data")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<TimeOnly?>("HoraConclusao")
+                    b.Property<TimeOnly>("HoraConclusao")
                         .HasColumnType("time(6)");
 
-                    b.Property<TimeOnly?>("HoraInicio")
+                    b.Property<TimeOnly>("HoraInicio")
                         .HasColumnType("time(6)");
 
                     b.Property<int>("ServicoId")

@@ -9,6 +9,8 @@ namespace ApiFilme.Data.Dtos
         public ReadClienteDto Cliente { get; set; }
         public ReadServicoDto Servico { get; set; }
         public DateTime Data { get; set; }
+        public TimeOnly HoraInicio { get; set; }
+        public TimeOnly HoraConclusao { get; set; }
         public string? Anotacoes { get; set; }
     }
 }

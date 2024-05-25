@@ -21,7 +21,7 @@ namespace ApiFilme.Controllers
         }
 
         [HttpPost]
-        public IActionResult AdicionaAgenda(CreateAgendaDto createAgenda)
+        public IActionResult AdicionaAgenda([FromBody] CreateAgendaDto createAgenda)
         {
             Agenda agenda = _mapper.Map<Agenda>(createAgenda);
             _context.Agendas.Add(agenda);
