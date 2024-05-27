@@ -31,7 +31,9 @@ namespace ApiFilme.Controllers
         [HttpGet]
         public IEnumerable<ReadAgendaDto> RecuperaAgenda()
         {
-            return _mapper.Map<List<ReadAgendaDto>>(_context.Agendas.ToList());
+            var agendas = _context.Agendas.ToList();
+            var listaAgendas = _mapper.Map<List<ReadAgendaDto>>(_context.Agendas.ToList());
+            return listaAgendas;
         }
         [HttpGet("{id}")]
         public IActionResult RecuperaAgendaPorId(int id)
