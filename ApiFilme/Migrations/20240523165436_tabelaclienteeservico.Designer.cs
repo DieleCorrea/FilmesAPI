@@ -3,6 +3,7 @@ using System;
 using ApiFilme.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,47 +11,15 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiFilme.Migrations
 {
     [DbContext(typeof(FilmeContext))]
-    partial class FilmeContextModelSnapshot : ModelSnapshot
+    [Migration("20240523165436_tabelaclienteeservico")]
+    partial class tabelaclienteeservico
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "6.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
-
-            modelBuilder.Entity("ApiFilme.Models.Agenda", b =>
-                {
-                    b.Property<int>("AgendaId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("Anotacoes")
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("ClienteId")
-                        .HasColumnType("int");
-
-                    b.Property<DateOnly>("Data")
-                        .HasColumnType("date");
-
-                    b.Property<TimeOnly>("HoraConclusao")
-                        .HasColumnType("time(6)");
-
-                    b.Property<TimeOnly>("HoraInicio")
-                        .HasColumnType("time(6)");
-
-                    b.Property<int>("ServicoId")
-                        .HasColumnType("int");
-
-                    b.HasKey("AgendaId");
-
-                    b.HasIndex("ClienteId");
-
-                    b.HasIndex("ServicoId");
-
-                    b.ToTable("Agendas");
-                });
 
             modelBuilder.Entity("ApiFilme.Models.Cinema", b =>
                 {
@@ -172,25 +141,6 @@ namespace ApiFilme.Migrations
                     b.ToTable("Sessoes");
                 });
 
-            modelBuilder.Entity("ApiFilme.Models.Agenda", b =>
-                {
-                    b.HasOne("ApiFilme.Models.Cliente", "Cliente")
-                        .WithMany("Agendas")
-                        .HasForeignKey("ClienteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ApiFilme.Models.Servico", "Servico")
-                        .WithMany("Agendas")
-                        .HasForeignKey("ServicoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Cliente");
-
-                    b.Navigation("Servico");
-                });
-
             modelBuilder.Entity("ApiFilme.Models.Cinema", b =>
                 {
                     b.HasOne("ApiFilme.Models.Endereco", "Endereco")
@@ -226,11 +176,6 @@ namespace ApiFilme.Migrations
                     b.Navigation("Sessoes");
                 });
 
-            modelBuilder.Entity("ApiFilme.Models.Cliente", b =>
-                {
-                    b.Navigation("Agendas");
-                });
-
             modelBuilder.Entity("ApiFilme.Models.Endereco", b =>
                 {
                     b.Navigation("Cinema")
@@ -240,11 +185,6 @@ namespace ApiFilme.Migrations
             modelBuilder.Entity("ApiFilme.Models.Filme", b =>
                 {
                     b.Navigation("Sessoes");
-                });
-
-            modelBuilder.Entity("ApiFilme.Models.Servico", b =>
-                {
-                    b.Navigation("Agendas");
                 });
 #pragma warning restore 612, 618
         }
