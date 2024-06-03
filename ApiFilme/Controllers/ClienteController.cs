@@ -55,7 +55,8 @@ namespace ApiFilme.Controllers
             }
             _mapper.Map(clienteDto, cliente);
             _context.SaveChanges();
-            return NoContent();
+            ReadClienteDto read = _mapper.Map<ReadClienteDto>(cliente);
+            return Ok(read);
         }
         [HttpDelete("{id}")]
         public IActionResult DeletaCliente(int id)
