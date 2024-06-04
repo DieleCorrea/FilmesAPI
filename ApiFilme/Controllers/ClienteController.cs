@@ -26,7 +26,8 @@ namespace ApiFilme.Controllers
             Cliente cliente = _mapper.Map<Cliente>(createCliente);
             _context.Clientes.Add(cliente);
             _context.SaveChanges();
-            return CreatedAtAction(nameof(RecuperaClientePorId), new { Id = cliente.ClienteId }, createCliente);
+            //return CreatedAtAction(nameof(RecuperaClientePorId), new { Id = cliente.ClienteId }, createCliente);
+            return NoContent();
         }
         [HttpGet]
         public IEnumerable<ReadClienteDto> RecuperaCliente()
@@ -55,8 +56,9 @@ namespace ApiFilme.Controllers
             }
             _mapper.Map(clienteDto, cliente);
             _context.SaveChanges();
-            ReadClienteDto read = _mapper.Map<ReadClienteDto>(cliente);
-            return Ok(read);
+            //ReadClienteDto read = _mapper.Map<ReadClienteDto>(cliente);
+            //return Ok(read);
+            return NoContent();
         }
         [HttpDelete("{id}")]
         public IActionResult DeletaCliente(int id)
