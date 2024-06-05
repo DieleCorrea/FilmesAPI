@@ -10,29 +10,29 @@ namespace ApiFilme.Models
         [Required(ErrorMessage = "O Nome é obrigatório")]
         public string Nome { get; set; }
         [Required(ErrorMessage = "O TempoDeExecucao é obrigatório")]
-        public TimeSpan TempoDeExecucao { get; set; }
+        public TimeOnly TempoDeExecucao { get; set; }
         [Required(ErrorMessage = "O Valor é obrigatório")]
         public decimal Valor { get; set; }
         public virtual ICollection<Agenda> Agendas { get; set; }    
         
-        public Servico(int horas, int minutos)// Construtor que permite definir horas e minutos
-        {
-            TempoDeExecucao = new TimeSpan(horas, minutos, 0);
-        }
-        public Servico(TimeSpan tempoDeExecucao)// Construtor que permite definir diretamente o TimeSpan
-        {
-            TempoDeExecucao = tempoDeExecucao;
-        }
+        //public Servico(int horas, int minutos)// Construtor que permite definir horas e minutos
+        //{
+        //    TempoDeExecucao = new TimeSpan(horas, minutos, 0);
+        //}
+        //public Servico(TimeSpan tempoDeExecucao)// Construtor que permite definir diretamente o TimeSpan
+        //{
+        //    TempoDeExecucao = tempoDeExecucao;
+        //}
 
        
-        public void Executar() // Método para executar o serviço
-        {
-            // Exemplo de lógica do serviço
-            Console.WriteLine($"O serviço irá executar por {TempoDeExecucao.TotalMinutes} minutos.");
+        //public void Executar() // Método para executar o serviço
+        //{
+        //    // Exemplo de lógica do serviço
+        //    Console.WriteLine($"O serviço irá executar por {TempoDeExecucao.TotalMinutes} minutos.");
 
-            // Simulando o tempo de execução com Thread.Sleep (não recomendado em produção)
-            System.Threading.Thread.Sleep(TempoDeExecucao);
-        }
+        //    // Simulando o tempo de execução com Thread.Sleep (não recomendado em produção)
+        //    System.Threading.Thread.Sleep(TempoDeExecucao);
+        //}
     }
 
     #region Exemplo de uso

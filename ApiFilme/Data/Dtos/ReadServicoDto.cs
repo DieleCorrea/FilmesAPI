@@ -6,7 +6,7 @@ namespace ApiFilme.Data.Dtos
     {
         public int ServicoId { get; set; }
         public string Nome { get; set; }
-        public TimeSpan TempoDeExecucao { get; set; }
+        public TimeOnly TempoDeExecucao { get; set; }
         public decimal Valor { get; set; }
     }
 }
