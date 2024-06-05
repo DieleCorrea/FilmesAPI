@@ -29,6 +29,7 @@ builder.Services.AddControllers().AddJsonOptions(opt =>
 {
     opt.JsonSerializerOptions.Converters.Add(new DateOnlyConverter());
     opt.JsonSerializerOptions.Converters.Add(new TimeOnlyConverts());
+    opt.JsonSerializerOptions.Converters.Add(new DecimalJsonConverter());
     opt.JsonSerializerOptions.DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull;
     opt.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
 }); ;

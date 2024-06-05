@@ -26,7 +26,7 @@ namespace ApiFilme.Controllers
             Servico servico = _mapper.Map<Servico>(createServico);
             _context.Servicos.Add(servico);
             _context.SaveChanges();
-            return CreatedAtAction(nameof(RecuperaServicoPorId), new { Id = servico.ServicoId }, createServico);
+            return NoContent();
         }
         [HttpGet]
         public IEnumerable<ReadServicoDto> RecuperaServico()
