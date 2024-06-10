@@ -1,4 +1,5 @@
 ﻿using ApiFilme.Models;
+using ApiFilme.Models.Flmes;
 using Microsoft.EntityFrameworkCore;
 
 namespace ApiFilme.Data

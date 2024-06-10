@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ApiFilme.Models
+namespace ApiFilme.Models.Flmes
 {
-    public class Sessao 
+    public class Sessao
     {
-       
+
         public int? FilmeId { get; set; }
         public virtual Filme Filme { get; set; }
         public int? CinemaId { get; set; }

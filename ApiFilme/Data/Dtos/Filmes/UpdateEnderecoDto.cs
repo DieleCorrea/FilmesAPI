@@ -1,6 +1,6 @@
-﻿namespace ApiFilme.Data.Dtos
+﻿namespace ApiFilme.Data.Dtos.Filmes
 {
-    public class ReadEnderecoDto
+    public class UpdateEnderecoDto
     {
         public int Id { get; set; }
         public string Logradouro { get; set; }

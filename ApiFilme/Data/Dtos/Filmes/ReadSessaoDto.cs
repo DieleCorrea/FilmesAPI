@@ -1,4 +1,4 @@
-﻿namespace ApiFilme.Data.Dtos
+﻿namespace ApiFilme.Data.Dtos.Filmes
 {
     public class ReadSessaoDto
     {

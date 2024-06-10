@@ -1,8 +1,8 @@
-﻿using ApiFilme.Data.Dtos;
-using ApiFilme.Models;
+﻿using ApiFilme.Data.Dtos.Filmes;
+using ApiFilme.Models.Flmes;
 using AutoMapper;
 
-namespace ApiFilme.Profiles
+namespace ApiFilme.Profiles.Filmes
 {
     public class EnderecoProfile : Profile
     {

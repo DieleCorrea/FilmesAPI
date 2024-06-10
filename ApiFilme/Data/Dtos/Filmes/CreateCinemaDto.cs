@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ApiFilme.Data.Dtos
+namespace ApiFilme.Data.Dtos.Filmes
 {
     public class CreateCinemaDto
     {
@@ -8,6 +8,6 @@ namespace ApiFilme.Data.Dtos
         public string Nome { get; set; }
         public int EnderecoId { get; set; }
 
-      
+
     }
 }
