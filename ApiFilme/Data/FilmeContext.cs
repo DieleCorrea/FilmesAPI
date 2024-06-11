@@ -39,5 +39,6 @@ namespace ApiFilme.Data
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Servico> Servicos { get; set; }
         public DbSet<Agenda> Agendas { get; set; }  
+        public DbSet<HorasTrabalhadas> HorasTrabalhadas { get; set; }   
     }
 }
