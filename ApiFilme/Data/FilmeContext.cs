@@ -29,6 +29,14 @@ namespace ApiFilme.Data
                 .HasOne(endereco => endereco.Cinema)
                 .WithOne(cinema => cinema.Endereco)
                 .OnDelete(DeleteBehavior.Restrict);//não permite deletar, pois faz a deleção em cascata, e isso acarretaria em deletar o cinema e consequentimente a sessão 
+            modelBuilder.Entity<Cliente>()
+                .HasMany(cli => cli.Agendas)
+                .WithOne(cli => cli.Cliente)
+                .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<Servico>()
+                .HasMany(cli => cli.Agendas)
+                .WithOne(cli => cli.Servico)
+                .OnDelete(DeleteBehavior.Cascade);
         }
 
         // para criar a tabela no banco 

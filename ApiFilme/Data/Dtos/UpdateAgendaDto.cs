@@ -9,7 +9,7 @@ namespace ApiFilme.Data.Dtos
         [Required]
         public int ServicoId { get; set; }
         [Required]
-        public DateTime Data { get; set; }
+        public DateOnly Data { get; set; }
 
         [Required]
         public TimeOnly HoraInicio { get; set; }

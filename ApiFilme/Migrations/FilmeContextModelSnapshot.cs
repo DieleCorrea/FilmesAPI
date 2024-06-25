@@ -49,7 +49,7 @@ namespace ApiFilme.Migrations
 
                     b.HasIndex("ServicoId");
 
-                    b.ToTable("Agendas");
+                    b.ToTable("Agendas", (string)null);
                 });
 
             modelBuilder.Entity("ApiFilme.Models.Cliente", b =>
@@ -71,7 +71,7 @@ namespace ApiFilme.Migrations
 
                     b.HasKey("ClienteId");
 
-                    b.ToTable("Clientes");
+                    b.ToTable("Clientes", (string)null);
                 });
 
             modelBuilder.Entity("ApiFilme.Models.Flmes.Cinema", b =>
@@ -92,7 +92,7 @@ namespace ApiFilme.Migrations
                     b.HasIndex("EnderecoId")
                         .IsUnique();
 
-                    b.ToTable("Cinemas");
+                    b.ToTable("Cinemas", (string)null);
                 });
 
             modelBuilder.Entity("ApiFilme.Models.Flmes.Endereco", b =>
@@ -110,7 +110,7 @@ namespace ApiFilme.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Enderecos");
+                    b.ToTable("Enderecos", (string)null);
                 });
 
             modelBuilder.Entity("ApiFilme.Models.Flmes.Filme", b =>
@@ -133,7 +133,7 @@ namespace ApiFilme.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Filmes");
+                    b.ToTable("Filmes", (string)null);
                 });
 
             modelBuilder.Entity("ApiFilme.Models.Flmes.Sessao", b =>
@@ -148,7 +148,7 @@ namespace ApiFilme.Migrations
 
                     b.HasIndex("CinemaId");
 
-                    b.ToTable("Sessoes");
+                    b.ToTable("Sessoes", (string)null);
                 });
 
             modelBuilder.Entity("ApiFilme.Models.HorasTrabalhadas", b =>
@@ -177,7 +177,7 @@ namespace ApiFilme.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("HorasTrabalhadas");
+                    b.ToTable("HorasTrabalhadas", (string)null);
                 });
 
             modelBuilder.Entity("ApiFilme.Models.Servico", b =>
@@ -198,7 +198,7 @@ namespace ApiFilme.Migrations
 
                     b.HasKey("ServicoId");
 
-                    b.ToTable("Servicos");
+                    b.ToTable("Servicos", (string)null);
                 });
 
             modelBuilder.Entity("ApiFilme.Models.Agenda", b =>
